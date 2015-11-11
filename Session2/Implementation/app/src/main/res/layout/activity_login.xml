@@ -34,11 +34,12 @@
 
             <EditText
                 android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/choose_username"
                 android:layout_toStartOf="@id/choose_username"
                 android:inputType="textPersonName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:hint="@string/username"/>
 
         </RelativeLayout>
 
@@ -47,6 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:hint="@string/password"
             android:ems="10"/>
 
     </LinearLayout>
