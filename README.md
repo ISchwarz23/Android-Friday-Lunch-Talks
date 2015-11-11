@@ -8,7 +8,7 @@ Only Java programming skills are required.
 [Android API Reference](http://developer.android.com/reference/packages.html)  
 [Android UI Guidlines](http://developer.android.com/design/index.html)  
 [Google Sample Implementations](http://developer.android.com/samples/index.html)  
-[Google Developer Console](https://play.google.com/apps/publish/?dev_acc=15246654107284849757#AppListPlace)  
+[Google Developer Console](https://play.google.com/apps/publish)  
 ##### YouTube
 [IntelliJ - Tipps and Tricks](https://www.youtube.com/watch?v=P3yGl4Kfwhs)
 ##### Others
