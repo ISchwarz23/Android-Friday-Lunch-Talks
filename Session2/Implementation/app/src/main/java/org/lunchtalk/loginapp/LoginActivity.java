@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
                 String enteredPassword = passwordField.getText().toString();
                 String enteredUsername = usernameField.getText().toString();
                 if (enteredPassword.isEmpty() || enteredUsername.isEmpty()) {
-                    // TODO: show some error
+                    Toast.makeText(LoginActivity.this, "Missing Username or Password", Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     intent.putExtra(PARAM_USERNAME, enteredUsername);
