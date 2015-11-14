@@ -32,7 +32,7 @@ Only Java programming skills are required.
 - What is a Service?
 
 
-### Helpfull Links
+### Helpful Links
 
 ##### Google
 [Android API Guide](http://developer.android.com/guide/index.html)  
