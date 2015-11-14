@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Store App</string>
+    <string name="storeInSharedPreference">Stored in SharedPreferences</string>
+    <string name="storeInFile">Stored in a File</string>
 </resources>
