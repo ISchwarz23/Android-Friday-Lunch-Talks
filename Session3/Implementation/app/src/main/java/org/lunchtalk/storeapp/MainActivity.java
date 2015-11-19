@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        preferences = getPreferences(Context.MODE_PRIVATE);
-
         sharedPreferenceEditText = (EditText) findViewById(R.id.editTextSharedPreferences);
         fileStorageEditText = (EditText) findViewById(R.id.editTextFileStorage);
+
+        preferences = getPreferences(Context.MODE_PRIVATE);
     }
 
     @Override
@@ -46,11 +46,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         saveToSharedPreferences();
         saveToFile();
-    }
-
-    private void saveToSharedPreferences() {
-        String textToSave = sharedPreferenceEditText.getText().toString();
-        preferences.edit().putString(SHARED_PREFERENCE_ENTERED_TEXT, textToSave).apply();
     }
 
     private void saveToFile() {
@@ -74,11 +69,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void loadFromSharedPreferences() {
-        String loadedText = preferences.getString(SHARED_PREFERENCE_ENTERED_TEXT, EMPTY_STING);
-        sharedPreferenceEditText.setText(loadedText);
-    }
-
     private void loadFromFile() {
         String loadedText = "";
         ObjectInputStream in = null;
@@ -99,6 +89,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         fileStorageEditText.setText(loadedText);
+    }
+
+    private void saveToSharedPreferences() {
+        String textToSave = sharedPreferenceEditText.getText().toString();
+        preferences.edit().putString(SHARED_PREFERENCE_ENTERED_TEXT, textToSave).apply();
+    }
+
+    private void loadFromSharedPreferences() {
+        String loadedText = preferences.getString(SHARED_PREFERENCE_ENTERED_TEXT, EMPTY_STING);
+        sharedPreferenceEditText.setText(loadedText);
     }
 
 }
