@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CounterView">
+        <attr name="initialCount" format="integer"/>
+        <attr name="countingStepSize" format="integer"/>
+    </declare-styleable>
+</resources>
+
