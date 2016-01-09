@@ -17,6 +17,9 @@ public class CounterView extends LinearLayout {
     private Button decrementButton;
     private Button incrementButton;
 
+    private int count = 0;
+    private int counterStep = 1;
+
     public CounterView(final Context context) {
         this(context, null);
     }
@@ -28,6 +31,23 @@ public class CounterView extends LinearLayout {
     public CounterView(final Context context, final AttributeSet attrs, final int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initializeViews();
+        initializeListeners();
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(final int count) {
+        this.count = count;
+    }
+
+    public int getCounterStep() {
+        return counterStep;
+    }
+
+    public void setCounterStep(final int counterStep) {
+        this.counterStep = counterStep;
     }
 
     private void initializeViews() {
@@ -36,6 +56,21 @@ public class CounterView extends LinearLayout {
         counterTextView = (TextView) rootView.findViewById(R.id.counterTextView);
         decrementButton = (Button) rootView.findViewById(R.id.decrementButton);
         incrementButton = (Button) rootView.findViewById(R.id.incrementButton);
+    }
+
+    private void initializeListeners() {
+        incrementButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                count += counterStep;
+            }
+        });
+        decrementButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                count -= counterStep;
+            }
+        });
     }
 
 }
