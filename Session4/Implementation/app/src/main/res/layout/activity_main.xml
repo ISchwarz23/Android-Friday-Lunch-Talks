@@ -12,10 +12,20 @@
     tools:context=".MainActivity">
 
     <org.lunchtalk.compoundview.CounterView
+        android:id="@+id/counterView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         custom:countingStepSize="5"
         custom:initialCount="25"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Count"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        style="?android:attr/buttonStyleSmall"/>
 
 </RelativeLayout>
